@@ -341,7 +341,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/07/16/promise/" itemprop="url">Untitled</a></h1>
+                <a class="post-title-link" href="/2018/07/16/promise/" itemprop="url">Promise的实现</a></h1>
         
 
         <div class="post-meta">
@@ -353,7 +353,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T22:18:11+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T15:53:22+08:00">
                 2018-07-16
               </time>
             
@@ -363,6 +363,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/promise/" itemprop="url" rel="index">
+                    <span itemprop="name">promise"</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -385,7 +407,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,341
+                  1,337
                 </span>
               
 
@@ -401,7 +423,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7
+                  6
                 </span>
               
             </div>
@@ -424,7 +446,7 @@
       
         
           
-            <h2 id="Promise的实现"><a href="#Promise的实现" class="headerlink" title="Promise的实现"></a>Promise的实现</h2><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+            <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
 <li><p>回调函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回掉函数的参数为常量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_1</span> (<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    callback(<span class="number">50</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_1(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调函数的参数为方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_2</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value)</span><br><span class="line">    &#125;</span><br><span class="line">    callback(resolve)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_2(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    a(<span class="number">100</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
@@ -542,7 +564,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>

@@ -127,7 +127,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="promise,es6," />
 
 
 
@@ -140,17 +140,18 @@
 
 
 
-<meta name="description" content="Promise的实现准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;">
+<meta name="description" content="准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;#123;    f">
+<meta name="keywords" content="promise,es6">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Enjoy technology!">
+<meta property="og:title" content="Promise的实现">
 <meta property="og:url" content="http://blog.xixiyoung.com/2018/07/16/promise/index.html">
 <meta property="og:site_name" content="Enjoy technology!">
-<meta property="og:description" content="Promise的实现准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;">
+<meta property="og:description" content="准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;#123;    f">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-07-16T14:17:12.796Z">
+<meta property="og:updated_time" content="2018-07-16T15:16:21.016Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Enjoy technology!">
-<meta name="twitter:description" content="Promise的实现准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;">
+<meta name="twitter:title" content="Promise的实现">
+<meta name="twitter:description" content="准备工作 回调函数 123456789101112131415161718//回掉函数的参数为常量function Cc_1 (callback)&amp;#123;    callback(50);&amp;#125;new Cc_1(function(a)&amp;#123;    console.log(a)&amp;#125;)//回调函数的参数为方法function Cc_2(callback) &amp;#123;    f">
 
 
 
@@ -186,7 +187,7 @@
 
 
 
-  <title> | Enjoy technology!</title>
+  <title>Promise的实现 | Enjoy technology!</title>
   
 
 
@@ -339,7 +340,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline"></h1>
+          <h1 class="post-title" itemprop="name headline">Promise的实现</h1>
         
 
         <div class="post-meta">
@@ -351,7 +352,7 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T22:18:11+08:00">
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T15:53:22+08:00">
                 2018-07-16
               </time>
             
@@ -361,6 +362,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/promise/" itemprop="url" rel="index">
+                    <span itemprop="name">promise"</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -388,7 +411,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  1,341
+                  1,337
                 </span>
               
 
@@ -404,7 +427,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  7
+                  6
                 </span>
               
             </div>
@@ -425,7 +448,7 @@
       
 
       
-        <h2 id="Promise的实现"><a href="#Promise的实现" class="headerlink" title="Promise的实现"></a>Promise的实现</h2><h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
+        <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
 <li><p>回调函数</p>
 <figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回掉函数的参数为常量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_1</span> (<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    callback(<span class="number">50</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_1(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调函数的参数为方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_2</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value)</span><br><span class="line">    &#125;</span><br><span class="line">    callback(resolve)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_2(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    a(<span class="number">100</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 </li>
@@ -477,6 +500,14 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/promise/" rel="tag"><i class="fa fa-tag"></i> promise</a>
+          
+            <a href="/tags/es6/" rel="tag"><i class="fa fa-tag"></i> es6</a>
+          
+        </div>
       
 
       
@@ -568,7 +599,25 @@
             
 
             
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
 
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">2</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
             
 
           </nav>
@@ -649,7 +698,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Promise的实现"><span class="nav-number">1.</span> <span class="nav-text">Promise的实现</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">1.0.1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise极简雏形"><span class="nav-number">1.0.2.</span> <span class="nav-text">Promise极简雏形</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-1-2-–异步执行回调函数-链式调用"><span class="nav-number">1.0.3.</span> <span class="nav-text">解决问题 1 2 –异步执行回调函数 链式调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-3-4-–-加入状态-链式传值"><span class="nav-number">1.0.4.</span> <span class="nav-text">解决问题 3 4 – 加入状态 链式传值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-5-串行执行promise"><span class="nav-number">1.0.5.</span> <span class="nav-text">解决问题    5 串行执行promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他问题"><span class="nav-number">1.0.6.</span> <span class="nav-text">其他问题</span></a></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#准备工作"><span class="nav-number">1.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#Promise极简雏形"><span class="nav-number">2.</span> <span class="nav-text">Promise极简雏形</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-1-2-–异步执行回调函数-链式调用"><span class="nav-number">3.</span> <span class="nav-text">解决问题 1 2 –异步执行回调函数 链式调用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-3-4-–-加入状态-链式传值"><span class="nav-number">4.</span> <span class="nav-text">解决问题 3 4 – 加入状态 链式传值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#解决问题-5-串行执行promise"><span class="nav-number">5.</span> <span class="nav-text">解决问题    5 串行执行promise</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#其他问题"><span class="nav-number">6.</span> <span class="nav-text">其他问题</span></a></li></ol></div>
             
 
           </div>
