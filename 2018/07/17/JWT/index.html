@@ -137,7 +137,7 @@
 
 
 
-  <meta name="keywords" content="xiyoung, Hexo, NexT" />
+  <meta name="keywords" content="jwt,安全," />
 
 
 
@@ -150,13 +150,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="xiyoung">
-<meta property="og:url" content="http://blog.xixiyoung.com/index.html">
+<meta name="description" content="加密算法可逆 对称性加密算法：加密和解密使用同一个密钥，常见的有AES、DES、3DES。   非对称算法：密和解密所使用的不是同一个密钥，通常有两个密钥，称为”公钥”和”私钥”，它们两个必需配对使用，常见的有RSA-X系列。 其他，如base64。">
+<meta name="keywords" content="jwt,安全">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JWT">
+<meta property="og:url" content="http://blog.xixiyoung.com/2018/07/17/JWT/index.html">
 <meta property="og:site_name" content="xiyoung">
+<meta property="og:description" content="加密算法可逆 对称性加密算法：加密和解密使用同一个密钥，常见的有AES、DES、3DES。   非对称算法：密和解密所使用的不是同一个密钥，通常有两个密钥，称为”公钥”和”私钥”，它们两个必需配对使用，常见的有RSA-X系列。 其他，如base64。">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-07-17T04:35:30.420Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="xiyoung">
+<meta name="twitter:title" content="JWT">
+<meta name="twitter:description" content="加密算法可逆 对称性加密算法：加密和解密使用同一个密钥，常见的有AES、DES、3DES。   非对称算法：密和解密所使用的不是同一个密钥，通常有两个密钥，称为”公钥”和”私钥”，它们两个必需配对使用，常见的有RSA-X系列。 其他，如base64。">
 
 
 
@@ -186,13 +191,13 @@
 
 
 
-  <link rel="canonical" href="http://blog.xixiyoung.com/"/>
+  <link rel="canonical" href="http://blog.xixiyoung.com/2018/07/17/JWT/"/>
 
 
 
 
 
-  <title>xiyoung</title>
+  <title>JWT | xiyoung</title>
   
 
 
@@ -211,8 +216,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
     <a href="https://github.com/xiyoung" class="github-corner" aria-label="View source on Github"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; left: 0; transform: scale(-1, 1);" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style></a>    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"><div class="site-brand-wrapper">
@@ -314,9 +318,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -346,9 +350,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/17/JWT/" itemprop="url">JWT</a></h1>
+          <h1 class="post-title" itemprop="name headline">JWT</h1>
         
 
         <div class="post-meta">
@@ -379,6 +381,11 @@
           
           
 
+          
+            <span class="post-meta-divider">|</span>
+            <span class="page-pv">本文总阅读量
+            <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>次
+            </span>
           
 
           
@@ -429,220 +436,152 @@
       
 
       
-        
-          <h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><h4 id="可逆"><a href="#可逆" class="headerlink" title="可逆"></a>可逆</h4><ul>
+        <h3 id="加密算法"><a href="#加密算法" class="headerlink" title="加密算法"></a>加密算法</h3><h4 id="可逆"><a href="#可逆" class="headerlink" title="可逆"></a>可逆</h4><ul>
 <li>对称性加密算法：加密和解密使用同一个密钥，常见的有AES、DES、3DES。</li>
 </ul>
 <ul>
 <li>非对称算法：密和解密所使用的不是同一个密钥，通常有两个密钥，称为”公钥”和”私钥”，它们两个必需配对使用，常见的有RSA-X系列。</li>
 <li>其他，如base64。</li>
 </ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/17/JWT/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-    
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xixiyoung.com/2018/07/16/promise/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiyoung">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xiyoung">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/16/promise/" itemprop="url">Promise的实现</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-16T15:53:22+08:00">
-                2018-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/es6/" itemprop="url" rel="index">
-                    <span itemprop="name">es6</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  1,337
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  6
-                </span>
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          <h4 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h4><ul>
-<li><p>回调函数</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//回掉函数的参数为常量</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_1</span> (<span class="params">callback</span>)</span>&#123;</span><br><span class="line">    callback(<span class="number">50</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_1(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    <span class="built_in">console</span>.log(a)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="comment">//回调函数的参数为方法</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">Cc_2</span>(<span class="params">callback</span>) </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">function</span> <span class="title">resolve</span>(<span class="params">value</span>) </span>&#123;</span><br><span class="line">        <span class="built_in">console</span>.log(value)</span><br><span class="line">    &#125;</span><br><span class="line">    callback(resolve)</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">new</span> Cc_2(<span class="function"><span class="keyword">function</span>(<span class="params">a</span>)</span>&#123;</span><br><span class="line">    a(<span class="number">100</span>)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<h4 id="不可逆"><a href="#不可逆" class="headerlink" title="不可逆"></a>不可逆</h4><ul>
+<li>散列算法：是一种单向加密算法，对不同长度的输入消息，产生固定长度的输出，常用来签名，常见的有HMAC-X系列、SHA-X系列、MD5。</li>
+</ul>
+<h4 id="三种常见加密算法"><a href="#三种常见加密算法" class="headerlink" title="三种常见加密算法"></a>三种常见加密算法</h4><ul>
+<li>SHA：作用与MD5类似</li>
+</ul>
+<ul>
+<li>RSA：由公钥(pub_key)和私钥(pri_key)组成，成对出现(可由工具生成)，任一方作为key加密message，可通过对方key解密得到message。</li>
+</ul>
+<ul>
+<li>base64：不算加密算法，只能算是一个编码算法，通常用于把二进制数据编码为可写的字符形式的数据，编码后的数据是一个字符串，其中包含的字符为：A-Z、a-z、0-9、+、/，共64个字符(其实还有一个“=“用作填充字符)</li>
+<li>HMAC：以一个key(密钥)和一个message(消息)为输入，结合一种加密散列函数(如MD5、SHA1等)生成一个消息摘要。形式为Hmac-X</li>
+</ul>
+<h3 id="JWT介绍："><a href="#JWT介绍：" class="headerlink" title="JWT介绍："></a>JWT介绍：</h3><p>一种开放式的标准，用于把以json对象传输的信息通过数字签名进行验证和信任，签名方式可使用HMAC(哈希算法)或RSA(公钥/私钥)。</p>
+<p>常见有：</p>
+<table>
+<thead>
+<tr>
+<th>HMAC算法</th>
+<th>消息摘要长度</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hmac-MD5</td>
+<td>128</td>
+</tr>
+<tr>
+<td>Hmac-SHA1</td>
+<td>160</td>
+</tr>
+<tr>
+<td>Hmac-SHA256</td>
+<td>256</td>
+</tr>
+<tr>
+<td>Hmac-SHA384</td>
+<td>384</td>
+</tr>
+<tr>
+<td>Hmac-SHA512</td>
+<td>512</td>
+</tr>
+</tbody>
+</table>
+<h3 id="相比session认证的优点"><a href="#相比session认证的优点" class="headerlink" title="相比session认证的优点"></a>相比session认证的优点</h3><ol>
+<li><p>session保存在内存中，用户量增多以后会占用大量内存</p>
+</li>
+<li><p>服务器集群要做共享session–可用redis解决</p>
+</li>
+<li><p>session是基于cookie来识别用户的，cookie被劫持，服务器会受到跨站请求伪造攻击</p>
+</li>
+<li><p>对于ios/android应用，不方便用session</p>
+</li>
+</ol>
+<h3 id="JWT的构成"><a href="#JWT的构成" class="headerlink" title="JWT的构成"></a>JWT的构成</h3><ul>
+<li><p>第一部分我们称它为头部（header)</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个header，例：</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">'typ'</span>: <span class="string">'JWT'</span>,</span><br><span class="line">  <span class="string">'alg'</span>: <span class="string">'HS256'</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第二部分我们称其为载荷（payload)</p>
+<ol>
+<li><p>标准中注册的声明</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">iss(Issuer): <span class="comment">//jwt签发者</span></span><br><span class="line">sub(Subject): <span class="comment">//jwt所面向的用户</span></span><br><span class="line">aud(Audience): <span class="comment">//接收jwt的一方</span></span><br><span class="line">exp(Expiration time): <span class="comment">//jwt的过期时间，这个过期时间必须要大于签发时间</span></span><br><span class="line">nbf(Not before): <span class="comment">//定义在什么时间之前，该jwt都是不可用的.</span></span><br><span class="line">iat(Issued at): <span class="comment">//jwt的签发时间</span></span><br><span class="line">jti(JWT ID): <span class="comment">//jwt的唯一身份标识，主要用来作为一次性token,从而回避重放攻击。</span></span><br></pre></td></tr></table></figure>
+</li>
+<li><p>公共的声明</p>
+<p>一般添加用户的相关信息或其他业务需要的必要信息，但不建议添加敏感信息，因为该部分可解密</p>
+</li>
+<li><p>私有的声明</p>
+<p>私有声明是提供者和消费者所共同定义的声明</p>
+</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个payload，例：</span></span><br><span class="line">&#123;</span><br><span class="line">  <span class="string">"sub"</span>: <span class="string">"1234567890"</span>,</span><br><span class="line">  <span class="string">"name"</span>: <span class="string">"John Doe"</span>,</span><br><span class="line">  <span class="string">"admin"</span>: <span class="literal">true</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>第三部分是签名（signature)</p>
+<ol>
+<li>header (base64后的)</li>
+<li>payload (base64后的)</li>
+<li>secret(也可为base64后的)——只能保存在服务器端切不可泄露</li>
+</ol>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//定义一个signature，例</span></span><br><span class="line"><span class="comment">// base64加密后的header和base64加密后的payload</span></span><br><span class="line"><span class="keyword">var</span> encodedString = base64UrlEncode(header) + <span class="string">'.'</span> + base64UrlEncode(payload);</span><br><span class="line"><span class="comment">//这里使用HMACSHA256算法签名</span></span><br><span class="line"><span class="keyword">var</span> signature = HMACSHA256(encodedString, <span class="string">'secret'</span>);</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/16/promise/#more" rel="contents">
-              Read more &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+<h3 id="token应用流程"><a href="#token应用流程" class="headerlink" title="token应用流程"></a>token应用流程</h3><ol>
+<li>登录：用户登录，输入用户名密码</li>
+<li>密码验证：服务器从数据库取出用户名和密码进行验证</li>
+<li>生成JWT：服务器端验证通过，根据从数据库返回的信息，以及预设规则，生成JWT</li>
+<li>返还JWT：服务器的HTTP RESPONSE中将JWT返还</li>
+<li>带JWT的请求：以后客户端发起请求，HTTP REQUEST HEADER中的Authorizatio字段都要有值，为JWT</li>
+<li>验证JWT：服务端验证JWT，获取用户信息，如不通过则请求异常</li>
+</ol>
+
       
     </div>
     
     
     
     <div>
+      
+        <div>
+    
+        <div style="text-align:center;color: #555;font-size:14px;">-------------The End-------------</div>
+    
+</div>
       
     </div>
 
     <div>
+      
+        
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2018/07/17/JWT/">JWT</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 xiyoung 的个人博客">xiyoung</a></p>
+  <p><span>发布时间:</span>2018年07月17日 - 11:07</p>
+  <p><span>最后更新:</span>2018年07月17日 - 12:07</p>
+  <p><span>原始链接:</span><a href="/2018/07/17/JWT/" title="JWT">http://blog.xixiyoung.com/2018/07/17/JWT/</a>
+    <span class="copy-path"  title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://blog.xixiyoung.com/2018/07/17/JWT/"  aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
       
     </div>
     
@@ -654,176 +593,42 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.xixiyoung.com/2018/07/17/Mocha/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="xiyoung">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="xiyoung">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/07/17/Mocha/" itemprop="url">Mocha&Chai</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-17T11:53:13+08:00">
-                2018-07-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-
+            <a href="/tags/jwt/" rel="tag"><i class="fa fa-tag"></i> jwt</a>
           
-            
+            <a href="/tags/安全/" rel="tag"><i class="fa fa-tag"></i> 安全</a>
           
-
-          
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Words count in article&#58;</span>
-                
-                <span title="Words count in article">
-                  942
-                </span>
-              
-
-              
-                <span class="post-meta-divider">|</span>
-              
-
-              
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-clock-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">Reading time &asymp;</span>
-                
-                <span title="Reading time">
-                  4
-                </span>
-              
-            </div>
-          
-
-          
-
         </div>
-      </header>
-    
+      
 
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
+      
       
       
 
       
-        
-          <p>For example<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// add.test.js</span></span><br><span class="line"><span class="keyword">const</span> mocha = <span class="built_in">require</span>(<span class="string">'mocha'</span>);</span><br><span class="line"><span class="keyword">const</span> expect = <span class="built_in">require</span>(<span class="string">'chai'</span>).expect;</span><br><span class="line"></span><br><span class="line"><span class="comment">//要测试的函数</span></span><br><span class="line"><span class="function"><span class="keyword">function</span> <span class="title">add</span>(<span class="params">x, y</span>) </span>&#123;</span><br><span class="line">  <span class="keyword">return</span> x + y;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//测试函数 describe 表示测试套件，是一序列相关程序的测试</span></span><br><span class="line">describe(<span class="string">'加法函数的测试'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  <span class="comment">//it表示单元测试(unit test)，也就是测试的最小单位。</span></span><br><span class="line">  it(<span class="string">'1 加 1 应该等于 2'</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="comment">//断言</span></span><br><span class="line">    expect(add(<span class="number">1</span>, <span class="number">1</span>)).to.be.equal(<span class="number">2</span>);</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/07/17/Mocha/#more" rel="contents">
-              Read more &raquo;
-            </a>
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/07/16/promise/" rel="next" title="Promise的实现">
+                <i class="fa fa-chevron-left"></i> Promise的实现
+              </a>
+            
           </div>
-          <!--/noindex-->
-        
-      
-    </div>
-    
-    
-    
-    <div>
-      
-    </div>
 
-    <div>
-      
-    </div>
-    
-    
+          <span class="post-nav-divider"></span>
 
-    
-
-    
-
-    <footer class="post-footer">
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/07/17/Mocha/" rel="prev" title="Mocha&Chai">
+                Mocha&Chai <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -833,10 +638,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -844,6 +650,15 @@
 
 
           
+
+  
+    <div class="comments" id="comments">
+      <div id="lv-container" data-id="city" data-uid="MTAyMC8zODEwNy8xNDYzNw=="></div>
+    </div>
+
+  
+
+
 
         </div>
         
@@ -864,8 +679,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -980,6 +804,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#加密算法"><span class="nav-number">1.</span> <span class="nav-text">加密算法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#可逆"><span class="nav-number">1.1.</span> <span class="nav-text">可逆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#不可逆"><span class="nav-number">1.2.</span> <span class="nav-text">不可逆</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#三种常见加密算法"><span class="nav-number">1.3.</span> <span class="nav-text">三种常见加密算法</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT介绍："><span class="nav-number">2.</span> <span class="nav-text">JWT介绍：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#相比session认证的优点"><span class="nav-number">3.</span> <span class="nav-text">相比session认证的优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#JWT的构成"><span class="nav-number">4.</span> <span class="nav-text">JWT的构成</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#token应用流程"><span class="nav-number">5.</span> <span class="nav-text">token应用流程</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1143,6 +983,10 @@
 
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
@@ -1171,6 +1015,17 @@
 
 
 
+  
+    <script type="text/javascript">
+      (function(d, s) {
+        var j, e = d.getElementsByTagName(s)[0];
+        if (typeof LivereTower === 'function') { return; }
+        j = d.createElement(s);
+        j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+        j.async = true;
+        e.parentNode.insertBefore(j, e);
+      })(document, 'script');
+    </script>
   
 
 
