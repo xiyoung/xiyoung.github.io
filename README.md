@@ -1,6 +1,6 @@
 ## [传送门](https://blog.xixiyoung.com/)
 
-> 借用[Hexo](https://hexo.io/zh-cn/docs/)和[Next](http://theme-next.iissnan.com/)搭建的个人博客，代码库放在[Github Pages](https://pages.github.com/)并绑定了自己申请的域名，欢迎来踩~
+> 借用[Hexo](https://hexo.io/zh-cn/docs/)和[Next](http://theme-next.iissnan.com/)搭建的个人博客，部署在[Github Pages](https://pages.github.com/)并绑定了自己申请的域名，欢迎来踩~
 
 #### 基础功能
 
